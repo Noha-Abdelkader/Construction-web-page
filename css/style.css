@@ -1,0 +1,801 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: raleway;
+/* cursor: none; */
+}
+
+@font-face {
+    font-family: raleway;
+    src: url(../Raleway/static/Raleway-Regular.ttf);
+}
+
+body {
+    background-color: #fff;
+
+}
+
+/* ========== navbar==================================================== */
+nav{
+    background-color: #021239 !important;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 98;
+    transition: all 1s;
+}
+
+.navbar [class="navbar-brand"] {
+    transition: top 1s;
+}
+
+@media screen and (min-width:668px) and (max-width:1550px) {
+    .navbar [class="navbar-brand"] {
+        position: relative;
+        top: 40px;
+    } ;
+}
+@media screen and (min-width:769px) and (max-width:810px) {
+    .navbar .nav-link{
+        /* padding: 0.2rem !important; */
+    }
+}
+
+/* ====== end navbar ====================================================== */
+
+/* === start home section ================================================================== */
+#home {
+    background-image: url(../images/banner-bg.png);
+    background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: aliceblue;
+}
+
+
+
+
+#home button {
+    color: #e8531f;
+    padding: 0.7rem 1.8rem;
+    border: none;
+    font-weight: 800;
+    margin-inline: 0.5rem;
+    margin-bottom: 1rem;
+    transition: all 1s;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.098);
+    
+
+}
+
+#home button[href="#home"] {
+    background-color: #e8531f;
+    border: none;
+    position: relative;
+    color: #fff;
+}
+
+#home button[href="#home"]:hover {
+    background-color: #fff;
+    color: #e8531f;
+}
+
+#home button[href="#home"]::after,
+#home button[href="#home"]::before {
+    content: '';
+    position: absolute;
+    background-color: #e8531f;
+    transition: all 1s;
+    
+}
+
+#home button[href="#home"]::after {
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 2px;
+}
+
+#home button[href="#home"]:hover::after,
+#home button[href="#home"]:hover::before {
+    width: 100%;
+}
+
+#home button[href="#home"]::before {
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+}
+
+#home button[href="#contact-us"] {
+    position: relative;
+    transition: all 1s;
+    border: 2px solid #e8531f;
+}
+#home button[href="#contact-us"]:hover {
+    border-color: transparent;
+
+}
+#home button[href="#contact-us"]:hover::after ,
+#home button[href="#contact-us"]:hover::before{
+    /* opacity: 1; */
+    transition: all 1s ;
+    width: 100%;
+    height: 100%;
+    border: #e8531f 2px solid;
+}
+#home button[href="#contact-us"]::after,
+#home button[href="#contact-us"]::before {
+    content: '';
+    position: absolute;
+    border: #e8531f 2px solid;
+    width: 0%;
+    height: 0%;
+    /* opacity: 0; */
+}
+#home button[href="#contact-us"]::after{
+    top: 1%;
+    left: 1%;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+}
+#home button[href="#contact-us"]::before {
+    bottom: 5%;
+    right: 1%;
+    border-top-color: transparent;
+    border-left-color: transparent;
+}
+
+@media screen and (min-width:600px) {
+    #home .container>h1 {
+        font-size: 4rem !important;
+    }  
+#home button {
+    font-size: 1.1rem;
+}
+}
+
+/* ====== START HEADER  ============================================================== */
+
+section #section-head span {
+    color: rgb(191, 210, 115);
+    padding: 0 0.5rem;
+}
+
+#section-head {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#section-head>h2 {
+    font-weight: 900;
+    line-height: 1.5rem;
+    margin-bottom: 1.8rem;
+    position: relative;
+    text-transform: uppercase;
+}
+
+#section-head>h2::after {
+    content: '';
+    background-color: black;
+    width: 15%;
+    height: 2px;
+    position: absolute;
+    bottom: -70%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+@media screen and (min-width:600px) {
+    #section-head>h2 {
+        font-size: 2.9rem;
+    }
+}
+
+/* ====== END HEADER  ============================================================== */
+
+/* ====== START ABOUT SECTION ============================================================== */
+#about {
+    padding: 2rem 1rem;
+    /* background-color: #021239; */
+}
+
+.img-container-section {
+    width: 750px;
+    left: 10%;
+}
+
+.img-container-section>img {
+    position: relative;
+    left: -15%;
+    z-index: 0;
+}
+
+.img-container-section::after {
+    content: '';
+    background-color: #efefef;
+    width: 750px;
+    height: 650px;
+    border-radius: 50%;
+    position: absolute;
+    top: -5%;
+    bottom: 0;
+    left: 5%;
+    right: 0;
+    z-index: -1;
+}
+
+@media screen and (min-width:500px) and (max-width:768px) {
+
+    .img-container-section {
+        left: -40%;
+        width: 550px;
+    }
+
+    .img-container-section>img {
+        left: 20%;
+        width: 600px;
+    }
+
+    .img-container-section::after {
+        width: 600px;
+        height: 500px;
+        top: -10%;
+        left: 30%;
+    }
+}
+
+@media screen and (min-width:575px) and (max-width:768px) {
+    #about {
+        padding-bottom: 2rem;
+    }
+   .img-container-section {
+        left: -20%;
+        width: 550px;
+    }
+
+    .img-container-section>img {
+        left: 20%;
+        width: 600px;
+    }
+
+    .img-container-section::after {
+        width: 600px;
+        height: 500px;
+        top: -10%;
+        left: 30%;
+    }
+}
+
+
+@media screen and (min-width:769px) and (max-width:992px) {
+    #about {
+        padding: 3.5rem 1rem 1.2rem;
+    }
+
+    .img-container-section {
+        left: -40px;
+        width: 450px;
+    }
+
+    .img-container-section>img {
+        left: -10px;
+    }
+
+    .img-container-section::after {
+        width: 450px;
+        height: 450px;
+        top: -20%;
+        left: 15%;
+    }
+    #about p{
+        font-size: 1rem !important;
+    }
+     
+
+}
+
+@media screen and (min-width:993px) and (max-width:1200px) {
+    #about {
+        padding: 5.4rem 1rem 3rem;
+    }
+
+    .img-container-section {
+        width: 550px;
+    }
+
+    .img-container-section>img {
+        position: relative;
+        left: 0%;
+        z-index: 0;
+    }
+
+    .img-container-section::after {
+        content: '';
+        background-color: #efefef;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        position: absolute;
+        top: -10%;
+        bottom: 0;
+        left: 25%;
+        right: 0;
+        z-index: -1;
+    }
+
+}
+
+@media screen and (min-width:1201px) and (max-width:1400px) {
+    #about {
+        padding: 3.5rem 1rem;
+    }
+
+    .img-container-section {
+        width: 600px;
+        left: -10%;
+    }
+
+    .img-container-section>img {
+        position: relative;
+        left: 10%;
+        z-index: 0;
+    }
+
+    .img-container-section::after {
+        content: '';
+        background-color: #efefef;
+        width: 700px;
+        height: 600px;
+        border-radius: 50%;
+        position: absolute;
+        top: -14%;
+        bottom: 0;
+        left: 15%;
+        right: 0;
+        z-index: -1;
+    }
+}
+
+.btn-hover {
+    background-color: #e8531f;
+    outline: none;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-hover:hover::before {
+    left: 20%;
+}
+
+.btn-hover::before {
+    content: '';
+    width: 65px;
+    height: 200px;
+    transform: rotate(-90deg);
+    background-color: rgba(255, 255, 255, 0.4);
+    display: inline-block;
+    position: absolute;
+    left: -90%;
+    top: -131%;
+    transition: all 0.5s;
+
+}
+
+/* ====== END ABOUT SECTION ============================================================== */
+
+
+/* == ======== start mouse style ========================================================= */
+.mouse-style{
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    /* background-color: rgb(238, 238, 49); */
+    box-shadow: 0 0 5px 5px rgb(238, 238, 49);
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index: 99;
+    transform: translate(0px,0px);
+}
+
+.mouse-hover{
+    background-color:rgb(238, 238, 49);
+    width: 30px;
+    height: 30px;
+    opacity: .8;
+}
+
+/* == ======== end mouse style ========================================================= */
+
+/* ===== START SERVICSE SECTION============================================================ */
+#servicse {
+    position: relative;
+    z-index: 0;
+    padding: 5rem 1rem;
+    overflow: hidden;
+}
+
+#servicse>.container {
+    width: 85%;
+}
+
+#servicse h6 {
+    font-size: 0.8rem;
+}
+
+#servicse .row .col-lg-4>div {
+    border-radius: 7px;
+    background-color: white;
+    padding: 0.5rem;
+    box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.1);
+}
+
+#servicse .row .col-lg-4 button {
+    background-color: #e8531f;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    font-size: 1.2rem;
+}
+
+#servicse .row .box-1,
+#servicse .row .box-3 {
+    position: relative;
+}
+
+#servicse .row .box-1 .servicse-img1-container {
+    position: absolute;
+    left: -45%;
+}
+
+
+#servicse .row .box-3 .servicse-img3-container {
+    position: absolute;
+    right: -45%;
+}
+
+@media screen and (min-width:993px) {
+
+    #servicse::after {
+        content: '';
+        background-color: #efefef;
+        width: 550px;
+        height: 500px;
+        border-radius: 50%;
+        position: absolute;
+        top: 0%;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        right: 0;
+        z-index: -1;
+    }
+}
+
+@media screen and (max-width:600px) {
+    #servicse .row {
+        row-gap: 12rem;
+    }
+
+    #servicse .row .box-1 .servicse-img1-container>img {
+        width: 100% !important;
+    }
+
+    #servicse .row .box-1 .servicse-img1-container {
+        left: 25%;
+        top: 100%;
+    }
+
+
+    #servicse .row .box-3 .servicse-img3-container {
+        right: 25%;
+        top: -100%;
+    }
+
+}
+
+@media screen and (max-width:992px) {
+
+    #servicse .row .box-1 .servicse-img1-container {
+        left: -20%;
+    }
+
+    #servicse .row .box-3 .servicse-img3-container {
+        right: -28%;
+    }
+}
+
+@media screen and (min-width:993px) and (max-width:1400px) {
+    #servicse .row .box-3 .servicse-img3-container {
+        right: -65%;
+        top: -14%;
+    }
+
+}
+
+#servicse .row .col-lg-4 button {
+    position: relative;
+    overflow: hidden;
+}
+
+#servicse .row .col-lg-4 button::before {
+    content: '';
+    width: 120%;
+    height: 130%;
+    background-color: rgba(248, 225, 225, 0.3);
+    display: inline-block;
+    position: absolute;
+    transform: skew(-45deg);
+    top: -5px;
+    left: -140%;
+    transition: all 1s;
+}
+
+
+#servicse .row .col-lg-4 button:hover::before {
+    left: 115%;
+
+}
+
+/* ===== END SERVICSE SECTION============================================================ */
+
+/* ======== START PROJECTS SECTION =================================================== */
+#projects .nav-pills .nav-link {
+    color: black !important;
+    font-weight: 800;
+    font-size: 1.1rem;
+    padding-inline: 1rem;
+    margin-inline: 1.5rem;
+
+}
+
+#projects .nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background-color: #e8531f !important;
+}
+
+button:focus:not(:focus-visible) {
+    border: none !important;
+}
+
+@media screen and (max-width:768px) {
+    #projects>div {
+        width: 75%;
+    }
+}
+
+/* ======== END PROJECTS SECTION =================================================== */
+
+/* ====== START PHILOSOPHY SECTION =====================================================================  */
+#PHILOSOPHY ul {
+    border: 2px black solid;
+    border-radius: 7px;
+    font-size: 1.3rem;
+}
+
+#PHILOSOPHY ul li {
+    margin-bottom: 1.5rem;
+}
+
+#PHILOSOPHY ul span {
+    background-color: #e8531f;
+    border-radius: 7px;
+    padding: 1rem 1.5rem;
+    margin-inline: 1rem;
+    color: #fff;
+}
+
+@media screen and (min-width:768px) and (max-width:992px) {
+    #PHILOSOPHY ul {
+        font-size: 1rem;
+    }
+
+    #PHILOSOPHY ul span {
+        padding: 1rem;
+        margin-inline: 0.5rem;
+    }
+
+}
+
+
+/* ====== END PHILOSOPHY SECTION =====================================================================  */
+
+/* ======= START FEATURES PROJECTS SECTION================================================== */
+
+#features-projects #carouselExampleInterval button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #e8531f;
+    opacity: 1;
+}
+
+#features-projects .carousel-control-next,
+.carousel-control-prev {
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+@media screen and (max-width:768px) {
+    #features-projects #section-head>h2 {
+        font-size: 2rem;
+    }
+
+    #features-projects #carouselExampleInterval .carousel-inner .carousel-item p {
+        font-size: .8rem !important;
+        font-weight: 800;
+    }
+}
+
+/* ======= END FEATURES PROJECTS SECTION================================================== */
+
+/* ====== START  GET IN TOUCH SECTION  SECTION ================================================ */
+#get-touch input,
+textarea {
+    border: none;
+    width: 100%;
+}
+
+#get-touch {
+    background-color: #efefef;
+}
+
+#get-touch button {
+    background-color: #021239;
+    color: white;
+    transition: all 0.5s;
+}
+
+#get-touch button:hover {
+    background-color: white;
+    color: #021239;
+}
+
+/* ====== END  GET IN TOUCH SECTION  SECTION ================================================ */
+
+/* ==== START  quote  SECTION ======================================== */
+#quote {
+    letter-spacing: 0.07rem;
+    background-color: #e8531f;
+}
+
+#quote button {
+    position: relative;
+    border: none;
+    padding: 1.1rem 2rem;
+    font-size: 1.2rem;
+    transition: all 0.5s;
+}
+
+#quote button::after,
+#quote button::before {
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: #021239;
+    transition: all 1s;
+}
+
+#quote button::after {
+    width: 50px;
+    height: 2px;
+}
+
+#quote button:hover::after {
+    width: 100%;
+}
+
+#quote button::before {
+    width: 2px;
+    height: 30px;
+}
+
+#quote button:hover::before {
+    height: 100%;
+}
+
+
+#quote button span::after,
+#quote button span::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #021239;
+    transition: all 1s;
+}
+
+#quote button span::after {
+    width: 2px;
+    height: 30px;
+}
+
+#quote button:hover span::after {
+    height: 100%;
+}
+
+#quote button span::before {
+    height: 2px;
+    width: 50px;
+}
+#quote button:hover span::before {
+    width: 100%;
+}
+
+@media screen and (max-width:768px) {
+    #quote p {
+        font-size: 1rem !important;
+        letter-spacing: 0rem;
+
+    }
+
+}
+
+
+/* ==== END  quote  SECTION ======================================== */
+
+/* =========== START REVIEW SECTION===================================================== */
+#review p {
+    color: #021239;
+}
+
+#review span {
+    color: #e07c06;
+    ;
+}
+
+#review button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #e07c06;
+    margin-inline: .3rem;
+}
+
+button:focus:not(:focus-visible) {
+    border: 3px solid #e07c06;
+    background-color: #fff !important;
+}
+
+#review .carousel-item div:not(.carousel-caption) {
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.053);
+}
+
+
+/* =========== END REVIEW SECTION===================================================== */
+
+/* ======= start contact-us section =========================================== */
+#contact-us {
+    background-color: #021239;
+}
+
+
+#contact-us a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#contact-us a img {
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+}
+
+/* ===== END contact-us section============================================== */
+
+/* ====== START FOOTER SECTION =================================================== */
+footer {
+
+    background-color: #e8531f;
+}
+
+/* ====== END FOOTER SECTION =================================================== */
